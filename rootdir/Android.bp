@@ -16,6 +16,7 @@ prebuilt_etc {
     src: "etc/fstab.mt6789",
     vendor: true,
     vendor_ramdisk_available: true,
+    relative_install_path: "",
 }
 
 prebuilt_etc {
