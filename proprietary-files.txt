@@ -1579,7 +1579,6 @@ vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils.xml
 vendor/etc/vintf/manifest/manifest_cameraprovider.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
-vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml
 vendor/etc/vintf/manifest/memtrack-mediatek.xml
 vendor/etc/vintf/manifest/sarwifi-default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
