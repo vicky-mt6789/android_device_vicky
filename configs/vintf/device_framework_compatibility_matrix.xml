@@ -47,4 +47,67 @@
         </interface>
         <fqname>@1.0::ITui/default</fqname>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>com.motorola.hardware.biometric.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMotoFingerPrint</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IMotoFingerPrint/default</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>motorola.hardware.fdrcontrol</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>IFdrControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.2::IFdrControl/default</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>motorola.hardware.input</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMotInput</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IMotInput/default</fqname>
+    </hal>
+    
+    <!-- KEEP THIS UNCERTAIN LIB COMMENTED FOR NOW
+    <hal format="hidl" optional="true">
+        <name>motorola.hardware.sarwifi</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMtkWifi</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1::IMtkWifi/default</fqname>
+    </hal>
+    -->
+    <hal format="hidl" optional="true">
+        <name>vendor.dolby.hardware.dms</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IDms</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IDms/default</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.egistec.hardware.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IBiometricsFingerprintRbs</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
+    </hal>
 </compatibility-matrix>

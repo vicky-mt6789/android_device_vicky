@@ -163,18 +163,18 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/media_codecs_c2_audio.xml': blob_fixup()
         .regex_replace('.+media_codecs_dolby_audio.+\n', ''),
     # Fix remaining ndk_platform dependencies
-    'vendor/lib64/motorola.hardware.sarwifi-V1-ndk_platform.so': blob_fixup()
-        .replace_needed('motorola.hardware.sarwifi-V1-ndk_platform.so', 'motorola.hardware.sarwifi-V1-ndk.so'),
+    # 'vendor/lib64/motorola.hardware.sarwifi-V1-ndk_platform.so': blob_fixup()
+    #     .replace_needed('motorola.hardware.sarwifi-V1-ndk_platform.so', 'motorola.hardware.sarwifi-V1-ndk.so'),
     # Fix shared_libs dependencies that reference ndk_platform libraries
     ('vendor/lib/egl/mt6789/libGLES_mali.so', 'vendor/lib64/egl/mt6789/libGLES_mali.so'): blob_fixup()
         .replace_needed('arm.graphics-V1-ndk.so', 'arm.graphics-V1-ndk_platform.so'),
     ('vendor/lib/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so', 'vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so'): blob_fixup()
         .replace_needed('arm.graphics-V1-ndk.so', 'arm.graphics-V1-ndk_platform.so'),
-    # Fix remaining ndk_platform dependencies in factory and sarwifi-srv binaries
+    # Fix remaining ndk_platform dependencies in factory binary
     'vendor/bin/factory': blob_fixup()
         .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
-    'vendor/bin/hw/motorola.hardware.sarwifi-srv': blob_fixup()
-        .replace_needed('motorola.hardware.sarwifi-V1-ndk.so', 'motorola.hardware.sarwifi-V1-ndk_platform.so'),
+    # 'vendor/bin/hw/motorola.hardware.sarwifi-srv': blob_fixup()
+    #     .replace_needed('motorola.hardware.sarwifi-V1-ndk.so', 'motorola.hardware.sarwifi-V1-ndk_platform.so'),
     # Fix missing dependency modules
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('libalsautils-v31.so', 'libalsautilsv2.so'),

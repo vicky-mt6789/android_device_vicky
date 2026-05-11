@@ -1347,7 +1347,7 @@ vendor/etc/init/muxreport.rc
 vendor/etc/init/netdagent.rc
 vendor/etc/init/networksetting.rc
 vendor/etc/init/nvram_daemon.rc
-vendor/etc/init/sarwifi-default.rc
+#vendor/etc/init/sarwifi-default.rc
 vendor/etc/init/tee.rc
 vendor/etc/init/tetheroffloadservice.rc
 vendor/etc/init/trustonic.rc
@@ -1580,7 +1580,7 @@ vendor/etc/vintf/manifest/manifest_apuware_utils.xml
 vendor/etc/vintf/manifest/manifest_cameraprovider.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/memtrack-mediatek.xml
-vendor/etc/vintf/manifest/sarwifi-default.xml
+#vendor/etc/vintf/manifest/sarwifi-default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/AudioLog_dynamic.xml
 vendor/etc/MNL_Config.xml
