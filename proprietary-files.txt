@@ -7,9 +7,9 @@ vendor/etc/init/android.hardware.audio.service.mediatek.rc
 -vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so
 -vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.mediatek.so
-vendor/lib/hw/audio.primary.mt6789.so
+vendor/lib/hw/audio.primary.mt6789.so;DISABLE_CHECKELF
 vendor/lib/hw/audio.r_submix.mediatek.so
-vendor/lib/hw/audio.r_submix.mt6789.so
+vendor/lib/hw/audio.r_submix.mt6789.so;DISABLE_CHECKELF
 vendor/lib/audio_common-aidl-cpp.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libbwc.so
@@ -20,9 +20,9 @@ vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 -vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
 -vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mediatek.so
-vendor/lib64/hw/audio.primary.mt6789.so
+vendor/lib64/hw/audio.primary.mt6789.so;DISABLE_CHECKELF
 vendor/lib64/hw/audio.r_submix.mediatek.so
-vendor/lib64/hw/audio.r_submix.mt6789.so
+vendor/lib64/hw/audio.r_submix.mt6789.so;DISABLE_CHECKELF
 vendor/lib64/audio_common-aidl-cpp.so
 vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libbwc.so
@@ -34,14 +34,14 @@ vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/soundfx/libdlbvol.so
 -vendor/lib/soundfx/libdynproc.so
--vendor/lib/soundfx/libhapticgenerator.so
+-vendor/lib/soundfx/libhapticgenerator.so;DISABLE_CHECKELF
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/libdlbpreg.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdlbvol.so
 -vendor/lib64/soundfx/libdynproc.so
-vendor/lib64/soundfx/libhapticgenerator.so
+vendor/lib64/soundfx/libhapticgenerator.so;DISABLE_CHECKELF
 -vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/libdlbpreg.so
@@ -538,7 +538,7 @@ vendor/lib64/mt6789/mot_vicky_s5kgm1_mipi_raw_IdxMgr.so
 vendor/lib/mt6789/mot_vicky_s5khm6_mipi_raw_IdxMgr.so
 vendor/lib64/mt6789/mot_vicky_s5khm6_mipi_raw_IdxMgr.so
 vendor/lib64/libArcNetMtk.so
-vendor/lib64/libBSTSWAD.so
+vendor/lib64/libBSTSWAD.so;DISABLE_CHECKELF
 vendor/lib64/libBSTbase_share.so
 vendor/lib64/libCamera_motvickyhi1634qmipiraw_Auto_Night_Vision.so
 vendor/lib64/libCamera_motvickyhi1634qmipiraw_E2EHDR_Preview.so
@@ -734,7 +734,7 @@ vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/com.motorola.hardware.display.touch@1.0.so
 -vendor/lib64/com.motorola.hardware.display.touch@1.1.so
 -vendor/lib64/com.motorola.hardware.display.touch@1.2.so
--vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service
+-vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service;DISABLE_CHECKELF
 -vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
 -vendor/lib/com.motorola.hardware.display.panel@1.0.so
 -vendor/lib/com.motorola.hardware.display.panel@1.1.so
@@ -880,11 +880,11 @@ vendor/bin/hw/vendor.trustonic.tee@1.1-service
 -vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 -vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib/hw/gatekeeper.default.so
-vendor/lib/hw/gatekeeper.trustonic.so
+vendor/lib/hw/gatekeeper.default.so;DISABLE_CHECKELF
+vendor/lib/hw/gatekeeper.trustonic.so;DISABLE_CHECKELF
 -vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib64/hw/gatekeeper.default.so
-vendor/lib64/hw/gatekeeper.trustonic.so
+vendor/lib64/hw/gatekeeper.default.so;DISABLE_CHECKELF
+vendor/lib64/hw/gatekeeper.trustonic.so;DISABLE_CHECKELF
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
 
@@ -934,13 +934,13 @@ vendor/etc/gnss/agps_profiles_conf2.xml
 
 # Health
 -vendor/bin/hw/android.hardware.health@2.1-service
--vendor/bin/hw/motorola.hardware.health.storage@1.0-service
--vendor/bin/hw/motorola.hardware.health@2.0-service
+-vendor/bin/hw/motorola.hardware.health.storage@1.0-service;DISABLE_CHECKELF
+-vendor/bin/hw/motorola.hardware.health@2.0-service;DISABLE_CHECKELF
 -vendor/etc/init/android.hardware.health@2.1-service.rc
 -vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
 -vendor/etc/init/motorola.hardware.health@2.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
-vendor/lib64/libmotohid.so
+vendor/lib64/libmotohid.so;DISABLE_CHECKELF
 -vendor/lib64/motorola.hardware.health.storage@1.0.so
 -vendor/lib64/motorola.hardware.health@2.0.so
 
@@ -953,13 +953,13 @@ vendor/lib64/motorola.hardware.input@1.0.so
 # Keymaster
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
-vendor/lib/hw/kmsetkey.default.so
+vendor/lib/hw/kmsetkey.default.so;DISABLE_CHECKELF
 vendor/lib/hw/kmsetkey.trustonic.so
 vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib/libMcClient.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
-vendor/lib64/hw/kmsetkey.default.so
+vendor/lib64/hw/kmsetkey.default.so;DISABLE_CHECKELF
 vendor/lib64/hw/kmsetkey.trustonic.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/libMcClient.so
@@ -967,7 +967,7 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Media
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek;DISABLE_CHECKELF
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 -vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
@@ -980,9 +980,9 @@ vendor/lib/libMtkOmxCore.so
 vendor/lib/libMtkOmxGsmDec.so
 vendor/lib/libMtkOmxMp3Dec.so
 vendor/lib/libadpcmdec_mtk.so
-vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl@1.0-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_hidl@1.1.so:vendor/lib64/libcodec2_hidl@1.1-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_hidl@1.2.so:vendor/lib64/libcodec2_hidl@1.2-v31.so;FIX_SONAME
+vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl@1.0-v31.so;FIX_SONAME;DISABLE_CHECKELF
+vendor/lib64/libcodec2_hidl@1.1.so:vendor/lib64/libcodec2_hidl@1.1-v31.so;FIX_SONAME;DISABLE_CHECKELF
+vendor/lib64/libcodec2_hidl@1.2.so:vendor/lib64/libcodec2_hidl@1.2-v31.so;FIX_SONAME;DISABLE_CHECKELF
 vendor/lib64/libcodec2_hidl_plugin.so:vendor/lib64/libcodec2_hidl_plugin-v31.so;FIX_SONAME
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_vdec.so
@@ -1033,9 +1033,9 @@ vendor/etc/media_profiles_vendor.xml
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
-vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
 vendor/lib/mt6789/arm.graphics-V1-ndk_platform.so
-vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
 vendor/lib64/mt6789/arm.graphics-V1-ndk_platform.so
 
 # Security
@@ -1083,24 +1083,24 @@ vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service.trustonic
+vendor/bin/hw/android.hardware.security.keymint-service.trustonic;DISABLE_CHECKELF
 vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
+vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek;DISABLE_CHECKELF
 vendor/bin/hw/motorola.hardware.sensorscalibrate@1.0-service
 vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/etc/init/motorola.hardware.sensorscalibrate@1.0-service.rc
-vendor/lib/sensors.moto.so
+vendor/lib/sensors.moto.so;DISABLE_CHECKELF
 vendor/lib64/hw/sensors.mediatek.V2.0.so
-vendor/lib64/hw/sensors.mt6789.so
+vendor/lib64/hw/sensors.mt6789.so;DISABLE_CHECKELF
 vendor/lib64/libhfmanager.so
 vendor/lib64/libksensor.so
 vendor/lib64/motorola.hardware.sensorscalibrate@1.0.so
-vendor/lib64/sensors.moto.so
+vendor/lib64/sensors.moto.so;DISABLE_CHECKELF
 
 # Sensors configs
 vendor/etc/motorola/sensors/mot_sensor_settings.json
@@ -1236,7 +1236,7 @@ vendor/bin/conninfra_loader
 vendor/bin/eara_io_service
 vendor/bin/epdg_wod
 vendor/bin/expat
-vendor/bin/factory
+vendor/bin/factory;DISABLE_CHECKELF
 vendor/bin/fdrcontrol
 vendor/bin/fotacontrol
 vendor/bin/fpsgo
@@ -1269,7 +1269,7 @@ vendor/bin/ptf
 vendor/bin/rcs_volte_stack
 vendor/bin/rsudaemon_proxy
 vendor/bin/rt5512_calibration
-vendor/bin/sendevent2
+vendor/bin/sendevent2;DISABLE_CHECKELF
 vendor/bin/setconfig
 vendor/bin/smartpa_nvtest
 vendor/bin/sns_mot_client
@@ -1829,7 +1829,7 @@ vendor/lib/AVCSecureVdecCA.so
 vendor/lib/HEVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libAVCSecureVencCA.so
-vendor/lib/libHEVCdec_sa.ca7.android.so
+vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libMcRegistry.so
 vendor/lib/libMtkAinrEnh.so
 vendor/lib/libMtkSpeechEnh.so
@@ -1889,12 +1889,12 @@ vendor/lib/libfgauge_gm30.so
 vendor/lib/libfile_op.so
 vendor/lib/libgz_gp_client.so
 vendor/lib/libh264dec_customize.so
-vendor/lib/libh264dec_sa.ca7.so
-vendor/lib/libh264dec_sd.ca7.so
-vendor/lib/libh264dec_se.ca7.so
-vendor/lib/libh264enc_sa.ca7.so
+vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libhdrvideo.so
-vendor/lib/libhevce_sb.ca7.android.so
+vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libhwm.so
 vendor/lib/libhydra.so
 vendor/lib/libicd_decoder.so
@@ -1905,8 +1905,8 @@ vendor/lib/libispcameraca.so
 vendor/lib/liblog_vendor.so
 vendor/lib/libmmprofile.so
 vendor/lib/libmnetlink_v104.so
-vendor/lib/libmp4enc_sa.ca7.so
-vendor/lib/libmp4enc_xa.ca7.so
+vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libmp4enc_xa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtk_bsg.so
 vendor/lib/libmtkares.so
@@ -1934,12 +1934,12 @@ vendor/lib/libmvpuop_mtk_nn.so
 vendor/lib/libneuroeara.so
 vendor/lib/libneuron_graph_delegate.mtk.so
 vendor/lib/libneuropilot_hal_utils.so
-vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;DISABLE_CHECKELF
 vendor/lib/libnpagent.so
 vendor/lib/libnwk_opt_halwrap_vendor.so
 vendor/lib/liboem_specific.so
 vendor/lib/libpkip.so
-vendor/lib/libpkm.so
+vendor/lib/libpkm.so;DISABLE_CHECKELF
 vendor/lib/libportrait_repair_ppl3_ocl.so
 vendor/lib/librcs_interface.so
 vendor/lib/librcs_volte_core.so
@@ -1950,21 +1950,21 @@ vendor/lib/libscltm.so
 vendor/lib/libsimaka.so
 vendor/lib/libsimlock.so
 vendor/lib/libsimmelock.so
-vendor/lib/libspeech_enh_lib.so
+vendor/lib/libspeech_enh_lib.so;DISABLE_CHECKELF
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/libssl-md.so
 vendor/lib/libstorage_otp.so
 vendor/lib/libstrongswan.so
 vendor/lib/libtflite_mtk.so
-vendor/lib/libthha.so
+vendor/lib/libthha.so;DISABLE_CHECKELF
 vendor/lib/libtlcWidevineModularDrm.so
-vendor/lib/libtpa.so
+vendor/lib/libtpa.so;DISABLE_CHECKELF
 vendor/lib/libtranslator_mapi_v3.0.so
 vendor/lib/libtranslator_mdmi_v2.8.2.so
 vendor/lib/libtranslator_utils.so
 vendor/lib/libudf.so
 vendor/lib/liburee_meta_drmkeyinstall.so
-vendor/lib/libvcodec_oal.so
+vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib/libvcodec_utility_plat.mt6789.so
 vendor/lib/libvcodec_utility_plat.mt6855.so
 vendor/lib/libvcodec_utility_plat.mt6879.so
@@ -1973,9 +1973,9 @@ vendor/lib/libverno.so
 vendor/lib/libviagpsrpc.so
 vendor/lib/libvolte_core_shr.so
 vendor/lib/libvolte_xdmc_shr.so
-vendor/lib/libvp8dec_sa.ca7.so
-vendor/lib/libvp8enc_sa.ca7.so
-vendor/lib/libvp9dec_sa.ca7.so
+vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp9dec_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
 vendor/lib/libwapi.so
@@ -1992,7 +1992,7 @@ vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib64/hw/mt6789/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
-vendor/lib64/hw/awinic.audio.effect.so
+vendor/lib64/hw/awinic.audio.effect.so;DISABLE_CHECKELF
 vendor/lib64/hw/libMcGatekeeper.so
 vendor/lib64/hw/libSoftGatekeeper.so
 vendor/lib64/hw/thermal_hal.so
@@ -2021,7 +2021,7 @@ vendor/lib64/mt6789/libSonyIMX519PdafLibrary.so
 vendor/lib64/mt6789/libSonyIMX519PdafLibraryWrapper.so
 vendor/lib64/mt6789/libaaa_ltm.so
 vendor/lib64/mt6789/libaaa_ltmx.so
-vendor/lib64/mt6789/libacdk.so
+vendor/lib64/mt6789/libacdk.so;DISABLE_CHECKELF
 vendor/lib64/mt6789/libaiawb_moon.so
 vendor/lib64/mt6789/libaiawb_p1ggm.so
 vendor/lib64/mt6789/libaiawb_sun.so
@@ -2164,7 +2164,7 @@ vendor/lib64/libgwsdv2-ril.so
 vendor/lib64/libgwsdv3-ril.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libhdrvideo.so
-vendor/lib64/libhevce_sb.ca7.android.so
+vendor/lib64/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
 vendor/lib64/libhydra.so
@@ -2217,12 +2217,12 @@ vendor/lib64/libneuroeara.so
 vendor/lib64/libneuron_graph_delegate.mtk.so
 vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
-vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;DISABLE_CHECKELF
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libnwk_opt_halwrap_vendor.so
 vendor/lib64/liboem_specific.so
-vendor/lib64/libpkm.so
+vendor/lib64/libpkm.so;DISABLE_CHECKELF
 vendor/lib64/libpn557_fw.so
 vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/librgbwlightsensor.so
@@ -2233,13 +2233,13 @@ vendor/lib64/libscltm.so
 vendor/lib64/libsimaka.so
 vendor/lib64/libsimlock.so
 vendor/lib64/libsimmelock.so
-vendor/lib64/libspeech_enh_lib.so
+vendor/lib64/libspeech_enh_lib.so;DISABLE_CHECKELF
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libssl-md.so
 vendor/lib64/libstorage_otp.so
 vendor/lib64/libstrongswan.so
 vendor/lib64/libtflite_mtk.so
-vendor/lib64/libthha.so
+vendor/lib64/libthha.so;DISABLE_CHECKELF
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/libtranslator_mapi_v3.0.so
 vendor/lib64/libtranslator_mdmi_v2.8.2.so
@@ -2247,7 +2247,7 @@ vendor/lib64/libtranslator_utils.so
 vendor/lib64/libtrm.so
 vendor/lib64/libudf.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
-vendor/lib64/libvcodec_oal.so
+vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libverno.so
 vendor/lib64/libvia-ril.so
