@@ -1581,7 +1581,6 @@ vendor/etc/vintf/manifest/manifest_cameraprovider.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml
 vendor/etc/vintf/manifest/memtrack-mediatek.xml
-vendor/etc/vintf/manifest/power-default.xml
 vendor/etc/vintf/manifest/sarwifi-default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/AudioLog_dynamic.xml
