@@ -754,7 +754,6 @@ vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.2-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/lib/egl/mt6789/libGLES_mali.so
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_meow.so
 vendor/lib/egl/libMEOW_data.so
@@ -765,7 +764,6 @@ vendor/lib/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/mt6789/gralloc.common.so
 vendor/lib/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib/hw/mt6789/vulkan.mali.so
 vendor/lib/hw/displaypanel.default.so
 -vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
@@ -799,7 +797,6 @@ vendor/lib/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
-vendor/lib64/egl/mt6789/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -809,7 +806,6 @@ vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/gralloc.common.so
 vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib64/hw/mt6789/vulkan.mali.so
 vendor/lib64/hw/displaypanel.default.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
@@ -887,6 +883,12 @@ vendor/lib64/hw/gatekeeper.default.so;DISABLE_CHECKELF
 vendor/lib64/hw/gatekeeper.trustonic.so;DISABLE_CHECKELF
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
+
+# Graphics
+vendor/lib/egl/libGLES_mali.so
+vendor/lib/hw/vulkan.mali.so
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/vulkan.mali.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
