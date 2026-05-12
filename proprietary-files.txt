@@ -1036,9 +1036,9 @@ vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
 vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
-vendor/lib/mt6789/arm.graphics-V1-ndk_platform.so
 vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
-vendor/lib64/mt6789/arm.graphics-V1-ndk_platform.so
+vendor/lib/arm.graphics-V1-ndk_platform.so
+vendor/lib64/arm.graphics-V1-ndk_platform.so
 
 # Security
 system/lib64/android.hardware.security.keymint-V1-ndk.so
