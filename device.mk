@@ -88,6 +88,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MtkInCallService
 
+PRODUCT_PACKAGES += \
+    libvndksupport.vendor
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
