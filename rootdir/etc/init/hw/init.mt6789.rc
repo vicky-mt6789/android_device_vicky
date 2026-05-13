@@ -24,6 +24,11 @@ on init
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
 
+    # Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
+
 # mount different fs start
 
 on property:init.svc.vendor.charger=running
@@ -60,6 +65,12 @@ on fs
     # mount fstab
     mount_all --early
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
+
+on late-init
+# Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
 
 on late-fs
     mount_all --late
@@ -148,6 +159,11 @@ on post-fs-data
 
     # GPS
     chmod 0666 /dev/gps_emi
+
+    # Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
 
 # -----------------------
 # Add by MTK
@@ -318,6 +334,12 @@ on post-fs-data
 	#widevine driver node
 	chmod 0660 /dev/drm_wv
 	chown media system /dev/drm_wv
+
+on early-boot
+# Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
 	
 # End of adding by MTK drivers
 # -----------------------
@@ -428,3 +450,37 @@ on property:sys.boot_completed=1
 # OTG
 on property:sys.boot_completed=1
     write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
+
+
+# Logger
+service boot_log /system/bin/logcat -b all -D -f /sys/fs/pstore/boot_log_full.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_crash /system/bin/logcat -b crash -D -f /sys/fs/pstore/boot_log_crash.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_kernel /system/bin/logcat -b kernel -D -f /sys/fs/pstore/boot_log_kernel.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+    # Clear existing log and start the service
+    rm /sys/fs/pstore/boot_log.txt
+    start boot_log
+
+on property:sys.boot_completed=1
+# Stop the logger service
+    stop boot_log
+    stop boot_log_crash
+    stop boot_log_kernel
