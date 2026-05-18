@@ -43,7 +43,7 @@
     -->
     <modules>
         <!-- Primary Audio HAL -->
-        <module name="primary" halVersion="3.0">
+        <module name="primary" halVersion="2.0">
             <attachedDevices>
                 <item>Speaker</item>
                 <item>Earpiece</item>
@@ -122,8 +122,6 @@
                              samplingRates="8000 16000 32000 44100 48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO"/>
                 </mixPort>
-                <mixPort name="hifi_playback" role="source"/>
-                <mixPort name="hifi_input" role="sink"/>
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->

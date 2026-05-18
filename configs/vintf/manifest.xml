@@ -3,21 +3,25 @@
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
         <version>7.0</version>
+        <version>7.1</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
         <fqname>@7.0::IDevicesFactory/default</fqname>
+        <fqname>@7.1::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
         <version>7.0</version>
+        <version>7.1</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
         <fqname>@7.0::IEffectsFactory/default</fqname>
+        <fqname>@7.1::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -330,6 +334,16 @@
         <fqname>@1.0::INetdagent/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.nwk_opt</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INwkOpt</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INwkOpt/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.nvram</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -388,5 +402,10 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ITui/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.alps.alps_device</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IAlps/default</fqname>
     </hal>
 </manifest>

@@ -33,35 +33,35 @@ vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 # Audio (FX modules)
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/soundfx/libdlbvol.so
--vendor/lib/soundfx/libdynproc.so
--vendor/lib/soundfx/libhapticgenerator.so;DISABLE_CHECKELF
+vendor/lib/soundfx/libdynproc.so
+vendor/lib/soundfx/libhapticgenerator.so;DISABLE_CHECKELF
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/libdlbpreg.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdlbvol.so
--vendor/lib64/soundfx/libdynproc.so
+vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libhapticgenerator.so;DISABLE_CHECKELF
--vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/libdlbpreg.so
 
 # Audio configs
-system_ext/etc/a2dp_audio_policy_configuration.xml
-system_ext/etc/a2dp_in_audio_policy_configuration.xml
-system_ext/etc/audio_policy_configuration.xml
-system_ext/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
-system_ext/etc/audio_policy_configuration_stub.xml
-system_ext/etc/audio_policy_engine_configuration.xml
-system_ext/etc/audio_policy_engine_default_stream_volumes.xml
-system_ext/etc/audio_policy_engine_product_strategies.xml
-system_ext/etc/audio_policy_engine_stream_volumes.xml
-system_ext/etc/audio_policy_volumes.xml
-system_ext/etc/bluetooth_audio_policy_configuration.xml
-system_ext/etc/default_volume_tables.xml
-system_ext/etc/hearing_aid_audio_policy_configuration.xml
-system_ext/etc/r_submix_audio_policy_configuration.xml
-system_ext/etc/usb_audio_policy_configuration.xml
+-system_ext/etc/a2dp_audio_policy_configuration.xml
+-system_ext/etc/a2dp_in_audio_policy_configuration.xml
+-system_ext/etc/audio_policy_configuration.xml
+-system_ext/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
+-system_ext/etc/audio_policy_configuration_stub.xml
+-system_ext/etc/audio_policy_engine_configuration.xml
+-system_ext/etc/audio_policy_engine_default_stream_volumes.xml
+-system_ext/etc/audio_policy_engine_product_strategies.xml
+-system_ext/etc/audio_policy_engine_stream_volumes.xml
+-system_ext/etc/audio_policy_volumes.xml
+-system_ext/etc/bluetooth_audio_policy_configuration.xml
+-system_ext/etc/default_volume_tables.xml
+-system_ext/etc/hearing_aid_audio_policy_configuration.xml
+-system_ext/etc/r_submix_audio_policy_configuration.xml
+-system_ext/etc/usb_audio_policy_configuration.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/a2dp_in_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
@@ -239,12 +239,10 @@ vendor/lib64/mt6789/lib3a.ae.core.so
 vendor/lib/mt6789/lib3a.ae.so
 vendor/lib/mt6789/lib3a.awb.core.so
 vendor/lib/mt6789/lib3a.log.so
-vendor/lib/mt6789/libaiselector.so
 vendor/lib/mt6789/libcam.hal3a.log.so
 vendor/lib/mt6789/libcam.halsensor.hwintegration.so
 vendor/lib/mt6789/libcamalgo.platform2.so
 vendor/lib/mt6789/libcameracustom.lens.so
-vendor/lib/mt6789/libdpframework.so
 vendor/lib/mt6789/libmtk_drvb.so
 vendor/lib/mt6789/libmtkcam.atmseventmgr.so
 vendor/lib/mt6789/libmtkcam.eventcallback.so
@@ -255,7 +253,7 @@ vendor/lib/mt6789/libmtkcam_stdutils.so
 vendor/lib/mt6789/libmtkcam_sysutils.so
 vendor/lib/mt6789/libmtkcam_tuning_utils.so
 vendor/lib/mt6789/libmtkcam_ulog.so
-vendor/lib/mt6789/libpq_prot.so
+vendor/lib/mt6789/libpq_prot.so|libpq_prot
 vendor/lib/libCamera_motvickyhi1634qmipiraw_Auto_Night_Vision.so
 vendor/lib/libCamera_motvickyhi1634qmipiraw_E2EHDR_Preview.so
 vendor/lib/libCamera_motvickyhi1634qmipiraw_E2EHDR_Video.so
@@ -428,7 +426,8 @@ vendor/lib64/mt6789/lib3a.af.core.so
 vendor/lib64/mt6789/lib3a.awb.core.so
 vendor/lib64/mt6789/lib3a.flash.so
 vendor/lib64/mt6789/lib3a.log.so
-vendor/lib64/mt6789/libaiselector.so
+vendor/lib/mt6789/libaiselector.so:vendor/lib/libaiselector.so|libaiselector
+vendor/lib64/mt6789/libaiselector.so:vendor/lib64/libaiselector.so|libaiselector
 vendor/lib64/mt6789/libcam.chdr.so
 vendor/lib64/mt6789/libcam.feature_utils.so
 vendor/lib64/mt6789/libcam.hal3a.log.so
@@ -452,7 +451,6 @@ vendor/lib/mt6789/libcameracustom.so
 vendor/lib64/mt6789/libcameracustom.so
 vendor/lib64/mt6789/libdip_drv.so
 vendor/lib64/mt6789/libdip_postproc.so
-vendor/lib64/mt6789/libdpframework.so
 vendor/lib64/mt6789/libeffecthal.base.so
 vendor/lib64/mt6789/libfeature.face.so
 vendor/lib64/mt6789/libfeature.stereo.provider.so
@@ -489,7 +487,7 @@ vendor/lib64/mt6789/libmtkcam_device3_utils.so
 vendor/lib64/mt6789/libmtkcam_devicesessionpolicy.so
 vendor/lib64/mt6789/libmtkcam_diputils.so
 vendor/lib64/mt6789/libmtkcam_exif.so
-vendor/lib64/mt6789/libmtkcam_fdvt.so
+vendor/lib64/mt6789/libmtkcam_fdvt.so;SYMLINK=vendor/lib64/libmtkcam_fdvt.so
 vendor/lib64/mt6789/libmtkcam_featurepolicy.so
 vendor/lib64/mt6789/libmtkcam_featureutils.so
 vendor/lib64/mt6789/libmtkcam_grallocutils.so
@@ -525,7 +523,7 @@ vendor/lib64/mt6789/libmtkcam_synchelper.so
 vendor/lib64/mt6789/libmtkcam_sysutils.so
 vendor/lib64/mt6789/libmtkcam_tuning_utils.so
 vendor/lib64/mt6789/libmtkcam_ulog.so
-vendor/lib64/mt6789/libpq_prot.so
+vendor/lib64/mt6789/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so|libpq_prot
 vendor/lib64/mt6789/libstereoinfoaccessor_vsdof.so
 vendor/lib/mt6789/mot_vicky_hi1634q_mipi_raw_IdxMgr.so
 vendor/lib64/mt6789/mot_vicky_hi1634q_mipi_raw_IdxMgr.so
@@ -730,6 +728,10 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
+# libdpframework - Multilib Support
+vendor/lib/libdpframework.so|libdpframework
+vendor/lib64/libdpframework.so|libdpframework
+
 # Display
 vendor/lib64/com.motorola.hardware.display.touch@1.0.so
 -vendor/lib64/com.motorola.hardware.display.touch@1.1.so
@@ -740,17 +742,18 @@ vendor/lib64/com.motorola.hardware.display.touch@1.0.so
 -vendor/lib/com.motorola.hardware.display.panel@1.1.so
 -vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 -vendor/lib64/com.motorola.hardware.display.panel@1.1.so
-system_ext/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
-vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
--vendor/bin/hw/android.hardware.graphics.composer@2.1-service
--vendor/bin/hw/android.hardware.graphics.composer@2.3-service
+vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
+vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789:vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/bin/hw/android.hardware.graphics.composer@2.1-service
+vendor/bin/hw/android.hardware.graphics.composer@2.3-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
--vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
+vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
 vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
--vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
--vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
+vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
+vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.2-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -765,9 +768,9 @@ vendor/lib/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/mt6789/gralloc.common.so
 vendor/lib/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib/hw/displaypanel.default.so
--vendor/lib/hw/gralloc.default.so
+vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib/mt6789/libpqparamparser.so
+vendor/lib/mt6789/libpqparamparser.so|libpqparamparser
 vendor/lib/libDefaultFpsActor.so
 vendor/lib/libFrameRecord.so
 vendor/lib/libNoFpsActor.so
@@ -810,7 +813,7 @@ vendor/lib64/hw/displaypanel.default.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib64/mt6789/libpqparamparser.so
+vendor/lib64/mt6789/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so

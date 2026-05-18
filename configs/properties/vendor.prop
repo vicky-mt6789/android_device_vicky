@@ -1,4 +1,7 @@
 # Audio
+ro.hardware.audio.primary=mt6789
+ro.hardware.audio.r_submix=mediatek
+ro.hardware.audio.usb=mediatek
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 persist.vendor.audiohal.aurisys.pcm_dump_on=0
@@ -77,7 +80,7 @@ debug.graphics.game_default_frame_rate.disabled=true
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
 persist.vendor.sys.mtkaal.function=0
-ro.hardware.egl=mali
+ro.hardware.egl=meow
 ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.vulkan=mali
@@ -207,6 +210,7 @@ vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 
 # MediaTek
+ro.board.platform=mt6789
 ro.soc.manufacturer=Mediatek
 ro.vendor.mediatek.platform=MT6789
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1

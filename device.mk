@@ -55,7 +55,6 @@ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
-    android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl:64 \
     android.hardware.soundtrigger@2.3-impl:64
 
@@ -147,9 +146,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapmaxfree=48m
 
 # Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.3-service \
-    android.hardware.memtrack-service.mediatek
+PRODUCT_PACKAGES += android.hardware.memtrack-service.mediatek
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor:64 \
@@ -209,6 +206,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery \
     charger_res_images_vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -400,6 +401,15 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Properties
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.board.platform=mt6789 \
+    ro.hardware.egl=meow \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    persist.sys.usb.config=adb \
+    persist.sys.root_access=3
+
 include $(LOCAL_PATH)/vendor_logtag.mk
 
 # Protobuf

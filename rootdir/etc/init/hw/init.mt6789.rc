@@ -24,10 +24,7 @@ on init
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
 
-    # Logger
-    start boot_log
-    start boot_log_crash
-    start boot_log_kernel
+    # Logger - services will start in post-fs
 
 # mount different fs start
 
@@ -67,10 +64,7 @@ on fs
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
 on late-init
-# Logger
-    start boot_log
-    start boot_log_crash
-    start boot_log_kernel
+# Logger - services will start in post-fs
 
 on late-fs
     mount_all --late
@@ -160,10 +154,7 @@ on post-fs-data
     # GPS
     chmod 0666 /dev/gps_emi
 
-    # Logger
-    start boot_log
-    start boot_log_crash
-    start boot_log_kernel
+    # Logger - services will start in post-fs
 
 # -----------------------
 # Add by MTK
@@ -336,10 +327,7 @@ on post-fs-data
 	chown media system /dev/drm_wv
 
 on early-boot
-# Logger
-    start boot_log
-    start boot_log_crash
-    start boot_log_kernel
+# Logger - services will start in post-fs
 	
 # End of adding by MTK drivers
 # -----------------------
@@ -453,34 +441,39 @@ on property:sys.boot_completed=1
 
 
 # Logger
-service boot_log /system/bin/logcat -b all -D -f /sys/fs/pstore/boot_log_full.txt
-    class main
+service boot_log /system/bin/logcat -b all -f /cache/boot_logcat.txt
+    class core
+    user root
+    group root system
+    seclabel u:r:su:s0
+
+service boot_log_kernel /system/bin/logcat -b kernel -f /cache/boot_kernel.txt
+    class core
+    user root
+    group root system
+    seclabel u:r:su:s0
+
+service pmsg_copy /system/bin/sh -c "while true; do cp /sys/fs/pstore/pmsg-ramoops-0 /cache/pmsg_copy.txt 2>/dev/null; sync; sleep 1; done"
+    class core
     user root
     group root system
     disabled
-    oneshot
+    seclabel u:r:su:s0
 
-service boot_log_crash /system/bin/logcat -b crash -D -f /sys/fs/pstore/boot_log_crash.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service boot_log_kernel /system/bin/logcat -b kernel -D -f /sys/fs/pstore/boot_log_kernel.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-on post-fs-data
-    # Clear existing log and start the service
-    rm /sys/fs/pstore/boot_log.txt
+on post-fs
+    # Create log files and set permissions
+    write /cache/boot_logcat.txt ""
+    chmod 0666 /cache/boot_logcat.txt
+    write /cache/boot_kernel.txt ""
+    chmod 0666 /cache/boot_kernel.txt
+    write /cache/pmsg_copy.txt ""
+    chmod 0666 /cache/pmsg_copy.txt
     start boot_log
+    start boot_log_kernel
+    start pmsg_copy
 
 on property:sys.boot_completed=1
-# Stop the logger service
+# Stop the logger services
     stop boot_log
-    stop boot_log_crash
     stop boot_log_kernel
+    stop pmsg_copy
