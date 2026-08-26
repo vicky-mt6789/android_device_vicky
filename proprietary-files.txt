@@ -200,16 +200,16 @@ vendor/lib64/libnvram.so
 vendor/lib64/libnvram_sec.so
 
 # Bluetooth (A2DP)
-#vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-#vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
-#vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-#vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-#vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-#vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
-#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Boot
 -vendor/bin/hw/android.hardware.boot@1.2-service
@@ -1076,9 +1076,9 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 
 # Radio (IMS)
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
-#vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-#vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-#vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # RenderScript
 -vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
@@ -1237,7 +1237,6 @@ vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/charon
-vendor/bin/chipinfo
 vendor/bin/conninfra_loader
 vendor/bin/eara_io_service
 vendor/bin/epdg_wod
