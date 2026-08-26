@@ -23,13 +23,12 @@ namespace_imports = [
     'device/motorola/vicky',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
-    'hardware/mediatek/libaedv',
     'vendor/mediatek/ims',
     'hardware/motorola',
     'hardware/google/pixel',
     'hardware/google/interfaces',
-    'hardware/millennium',
-    'hardware/millennium/libtranlog',
+    'hardware/millenium',
+    'hardware/millenium/libtranlog',
 ]
 
 

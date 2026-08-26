@@ -4,4 +4,10 @@
 //
 
 soong_namespace {
+    imports: [
+		"hardware/mediatek",
+    	"hardware/millenium",
+        "hardware/google/interfaces",
+        "hardware/google/pixel",
+    ],
 }
