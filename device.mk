@@ -7,6 +7,23 @@
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Keep things relevant
+PRODUCT_SOURCE_ROOT_DIRS += \
+    device/motorola/vicky \
+    vendor/motorola/vicky \
+    hardware/mediatek \
+    hardware/motorola \
+    hardware/millenium
+
+# Exclude Qualcomm trees for MediaTek build
+PRODUCT_SOURCE_ROOT_DIRS += \
+    -hardware/qcom-caf \
+    -hardware/qcom \
+    -vendor/qcom \
+    -hardware/oplus \
+    -vendor/oplus
+
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
@@ -97,10 +114,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
-
-PRODUCT_PACKAGES += \
-   vendor.mediatek.hardware.bluetooth.audio@2.1.vendor:64 \
-   vendor.mediatek.hardware.bluetooth.audio@2.2.vendor:64
 
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
@@ -238,7 +251,6 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6789.power.rc \
     init.mt6789.rc \
-    init.mt6789.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
     init.recovery.usb.rc \
@@ -279,7 +291,6 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
 $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service-lazy \
-    android.hardware.media.c2-mtk-service \
     libcodec2_vndk.vendor:64 \
     libeffects:64 \
     libeffectsconfig.vendor:64 \
@@ -483,11 +494,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
-    hardware/mediatek/libaedv \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/millennium \
-    hardware/millennium/libtranlog
+    hardware/millenium \
+    hardware/millenium/libtranlog
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -512,6 +522,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set,mediatek_gadget,use_custom_usb_gadget_rc,true)
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
@@ -528,7 +539,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
     wpa_supplicant \
-    lib_driver_cmd_mt66xx \
     hostapd \
     android.hardware.wifi-service \
     libkeystore-wifi-hidl:64 \
