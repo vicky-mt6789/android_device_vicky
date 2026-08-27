@@ -204,6 +204,9 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.security.sharedsecret-V1-ndk.so'
         )
         .add_needed('android.hardware.security.rkp-V1-ndk.so'),
+        # Fix missing libbase dependency in boot HAL
+        #'vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2-mtkimpl.so': blob_fixup()
+        #.add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

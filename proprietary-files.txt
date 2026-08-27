@@ -874,14 +874,14 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets.rc
 vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 
 # Gatekeeper
--vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 vendor/bin/hw/vendor.trustonic.tee@1.1-service
--vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
+vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
--vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib/hw/gatekeeper.default.so;DISABLE_CHECKELF
 vendor/lib/hw/gatekeeper.trustonic.so;DISABLE_CHECKELF
--vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib64/hw/gatekeeper.default.so;DISABLE_CHECKELF
 vendor/lib64/hw/gatekeeper.trustonic.so;DISABLE_CHECKELF
 vendor/lib64/vendor.trustonic.tee@1.0.so

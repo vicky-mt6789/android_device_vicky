@@ -123,13 +123,15 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2460
+TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    com.android.hardware.boot \
-    android.hardware.boot-service.default_recovery:64
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service \
+    com.android.hardware.boot 
 
 # Camera
 PRODUCT_PACKAGES += \
