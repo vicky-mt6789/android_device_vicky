@@ -56,8 +56,9 @@
 /sys/devices/platform/(odm/odm:tran_battery|tran_battery)/tran_cam                              u:object_r:sysfs_tran_cam_file:s0
 
 # TEE / mcRegistry
-/(vendor|system/vendor)/app/mcRegistry(/.*)?      u:object_r:mobicore_vendor_file:s0
-/data/vendor/mcRegistry(/.*)?                     u:object_r:mobicore_data_file:s0
+# Removed due to duplicate specifications in vendor sepolicy
+# /(vendor|system/vendor)/app/mcRegistry(/.*)?      u:object_r:mobicore_vendor_file:s0
+# /data/vendor/mcRegistry(/.*)?                     u:object_r:mobicore_data_file:s0
 /mnt/vendor/persist/mcRegistry(/.*)?              u:object_r:mobicore_data_file:s0
 
 # Tranfs
