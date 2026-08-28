@@ -1,0 +1,7 @@
+service fuelgauged /vendor/bin/fuelgauged
+    class core
+    user system
+    group system
+
+on early-fs
+    setprop ro.vendor.hw.fuelgauge int_fg

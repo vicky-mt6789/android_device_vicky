@@ -61,6 +61,9 @@ vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.chall
 # Charger
 ro.vendor.mtk_fast_charging_support=1
 
+# Fuelgauge
+ro.vendor.hw.fuelgauge=int_fg
+
 # Connsys
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0

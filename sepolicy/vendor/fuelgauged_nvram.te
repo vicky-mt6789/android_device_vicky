@@ -1,2 +1,7 @@
+# Permissions
 allow fuelgauged_nvram sysfs_dt_firmware_android:dir search;
 allow fuelgauged_nvram sysfs_dt_firmware_android:file r_file_perms;
+
+allow fuelgauged_nvram nvdata_file:dir rw_dir_perms;
+allow fuelgauged_nvram nvdata_file:file create_file_perms;
+allow fuelgauged_nvram nvram_device:chr_file rw_file_perms;

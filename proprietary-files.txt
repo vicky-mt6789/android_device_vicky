@@ -1311,8 +1311,8 @@ vendor/etc/init/camerahalserver.rc
 vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/eara-io-service.rc
 vendor/etc/init/fpsgo.rc
-vendor/etc/init/fuelgauged_init.rc
-vendor/etc/init/fuelgauged_nvram_init.rc
+# vendor/etc/init/fuelgauged_init.rc          - using custom replacement
+# vendor/etc/init/fuelgauged_nvram_init.rc    - using custom replacement
 vendor/etc/init/gbe.rc
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.alpslegacy.rc

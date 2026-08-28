@@ -1,6 +1,10 @@
 # BatteryInfo
 /sys/devices/platform/soc/11017000.i2c/i2c-5/5-006b/power_supply/charger(/.*)?						u:object_r:sysfs_batteryinfo:s0
 
+# Fuelgauged (added both now)
+/vendor/bin/fuelgauged        u:object_r:fuelgauged_exec:s0
+/vendor/bin/fuelgauged_nvram  u:object_r:fuelgauged_nvram_exec:s0
+
 # Camera
 /dev/cml421_ois(/.*)?                                                                   u:object_r:cml421_ois_device:s0
 /dev/cwvi5300                                                                           u:object_r:cwvi5300_device:s0

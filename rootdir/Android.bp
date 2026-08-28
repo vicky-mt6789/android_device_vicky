@@ -12,6 +12,20 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "fuelgauged_init.rc",
+    src: "etc/init/hw/fuelgauged_init.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fuelgauged_init_nvram.rc",
+    src: "etc/init/hw/fuelgauged_init_nvram.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "trustonic.rc",
     src: "etc/init/trustonic.rc",
     relative_install_path: "init",

@@ -1,0 +1,7 @@
+# Typical MTK fuelgauged access
+allow fuelgauged kmsg_device:chr_file rw_file_perms;
+allow fuelgauged self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# Access to battery sysfs and procfs nodes
+allow fuelgauged sysfs_batteryinfo:dir r_dir_perms;
+allow fuelgauged sysfs_batteryinfo:file rw_file_perms;
