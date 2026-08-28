@@ -246,6 +246,10 @@ PRODUCT_PACKAGES += \
     fstab.mt6789 \
     fstab.mt6789.vendor_ramdisk \
     init_connectivity.rc \
+    fuelgauged_init.rc \
+    fuelgauged_init_nvram.rc \
+    trustonic.rc \
+    android.hardware.security.keymint-service.trustonic.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
     init.insmod.sh \

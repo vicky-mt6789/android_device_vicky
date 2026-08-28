@@ -1090,7 +1090,7 @@ vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Security
 vendor/bin/hw/android.hardware.security.keymint-service.trustonic;DISABLE_CHECKELF
-vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
+# vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc 				- Using Custom Implementation
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
@@ -1355,7 +1355,7 @@ vendor/etc/init/nvram_daemon.rc
 #vendor/etc/init/sarwifi-default.rc
 vendor/etc/init/tee.rc
 vendor/etc/init/tetheroffloadservice.rc
-vendor/etc/init/trustonic.rc
+# vendor/etc/init/trustonic.rc				- Using Custom Implementation
 vendor/etc/init/v3avpud.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
