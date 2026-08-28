@@ -734,14 +734,14 @@ vendor/lib64/libdpframework.so|libdpframework
 
 # Display
 vendor/lib64/com.motorola.hardware.display.touch@1.0.so
--vendor/lib64/com.motorola.hardware.display.touch@1.1.so
--vendor/lib64/com.motorola.hardware.display.touch@1.2.so
--vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service;DISABLE_CHECKELF
--vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
--vendor/lib/com.motorola.hardware.display.panel@1.0.so
--vendor/lib/com.motorola.hardware.display.panel@1.1.so
--vendor/lib64/com.motorola.hardware.display.panel@1.0.so
--vendor/lib64/com.motorola.hardware.display.panel@1.1.so
+vendor/lib64/com.motorola.hardware.display.touch@1.1.so
+vendor/lib64/com.motorola.hardware.display.touch@1.2.so
+vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service;DISABLE_CHECKELF
+vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
+vendor/lib/com.motorola.hardware.display.panel@1.0.so
+vendor/lib/com.motorola.hardware.display.panel@1.1.so
+vendor/lib64/com.motorola.hardware.display.panel@1.0.so
+vendor/lib64/com.motorola.hardware.display.panel@1.1.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789:vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
@@ -1089,8 +1089,8 @@ vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service.trustonic;DISABLE_CHECKELF
-# vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc 				- Using Custom Implementation
+vendor/bin/hw/android.hardware.security.keymint-service.trustonic
+vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
@@ -1355,7 +1355,7 @@ vendor/etc/init/nvram_daemon.rc
 #vendor/etc/init/sarwifi-default.rc
 vendor/etc/init/tee.rc
 vendor/etc/init/tetheroffloadservice.rc
-# vendor/etc/init/trustonic.rc				- Using Custom Implementation
+vendor/etc/init/trustonic.rc
 vendor/etc/init/v3avpud.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc

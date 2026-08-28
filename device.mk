@@ -242,14 +242,16 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 # Init files
+
+#    trustonic.rc \
+#    android.hardware.security.keymint-service.trustonic.rc \
+
 PRODUCT_PACKAGES += \
     fstab.mt6789 \
     fstab.mt6789.vendor_ramdisk \
     init_connectivity.rc \
     fuelgauged_init.rc \
     fuelgauged_init_nvram.rc \
-    trustonic.rc \
-    android.hardware.security.keymint-service.trustonic.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
     init.insmod.sh \
@@ -276,6 +278,9 @@ PRODUCT_COPY_FILES += \
 
 # Enable DM file pre-opting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+
+# Enable DEXPREOPTIMIZATION
+WITH_DEXPREOPT := true
 
 # Keymaster
 PRODUCT_COPY_FILES += \
