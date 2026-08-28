@@ -26,20 +26,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "trustonic.rc",
-    src: "etc/init/trustonic.rc",
-    relative_install_path: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "android.hardware.security.keymint-service.trustonic.rc",
-    src: "etc/init/android.hardware.security.keymint-service.trustonic.rc",
-    relative_install_path: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "fstab.mt6789",
     src: "etc/fstab.mt6789",
     vendor: true,
