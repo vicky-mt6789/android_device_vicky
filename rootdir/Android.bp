@@ -14,14 +14,14 @@ prebuilt_etc {
 prebuilt_etc {
     name: "fuelgauged_init.rc",
     src: "etc/init/hw/fuelgauged_init.rc",
-    relative_install_path: "init/hw",
+    relative_install_path: "vendor/etc/init",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "fuelgauged_init_nvram.rc",
     src: "etc/init/hw/fuelgauged_init_nvram.rc",
-    relative_install_path: "init/hw",
+    relative_install_path: "vendor/etc/init",
     vendor: true,
 }
 

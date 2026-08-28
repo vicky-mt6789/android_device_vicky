@@ -4,4 +4,13 @@ service fuelgauged /vendor/bin/fuelgauged
     group system
 
 on early-fs
-    setprop ro.vendor.hw.fuelgauge int_fg
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
+    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
