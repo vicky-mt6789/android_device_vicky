@@ -21,7 +21,8 @@ PRODUCT_SOURCE_ROOT_DIRS += \
     -hardware/qcom \
     -vendor/qcom \
     -hardware/oplus \
-    -vendor/oplus
+    -vendor/oplus \
+    -hardware/mithorium
 
 
 # A/B
@@ -259,6 +260,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6789.power.rc \
     init.mt6789.rc \
+    init.mt6789.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
     init.recovery.usb.rc \
