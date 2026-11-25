@@ -1,3 +1,10 @@
+#
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # MTK connectivity .rc configure
 
 on post-fs-data
@@ -5,9 +12,10 @@ on post-fs-data
     mkdir /data/vendor/connsyslog 0755 system system
 
 on boot
+    insmod /vendor/lib/modules/wmt_drv.ko
+    start wmt_loader
 
 on property:vendor.connsys.driver.ready=yes
-    start wmt_loader
     start wmt_launcher
 
 # WMT
