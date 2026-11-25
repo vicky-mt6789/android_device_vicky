@@ -48,6 +48,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'libformatter',
         'libmnl',
+        'motorola.hardware.camera.imgtuner@2.0',
     ): lib_fixup_vendor_suffix,
 }
 
