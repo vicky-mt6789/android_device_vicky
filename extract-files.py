@@ -121,7 +121,6 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 
      'vendor/lib64/libstfactory-vendor.so', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so',
      'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libtflite_mtk.so', 'vendor/lib64/libtflite_mtk.so',
-     'vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek',
      'vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service',
      'vendor/bin/hw/motorola.hardware.health@2.0-service'): blob_fixup()
         .add_needed('libbase_shim.so'),
