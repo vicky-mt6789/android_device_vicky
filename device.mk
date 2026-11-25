@@ -225,9 +225,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl.vendor:64
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vintf/gnss-aidl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/gnss-aidl.xml
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
