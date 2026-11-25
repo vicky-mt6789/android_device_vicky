@@ -34,8 +34,6 @@ namespace_imports = [
     'hardware/motorola',
     'hardware/google/pixel',
     'hardware/google/interfaces',
-    'hardware/millenium',
-    'hardware/millenium/libtranlog',
 ]
 
 

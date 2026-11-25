@@ -18,8 +18,7 @@ PRODUCT_SOURCE_ROOT_DIRS += \
     device/motorola/vicky \
     vendor/motorola/vicky \
     hardware/mediatek \
-    hardware/motorola \
-    hardware/millenium
+    hardware/motorola
 
 # Exclude Qualcomm trees for MediaTek build
 PRODUCT_SOURCE_ROOT_DIRS += \
@@ -281,7 +280,7 @@ $(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.millennium
+    android.hardware.light-service.lineage
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -521,9 +520,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/google/pixel/pixelstats \
-    hardware/google/pixel/power-libperfmgr \
-    hardware/millenium \
-    hardware/millenium/libtranlog
+    hardware/google/pixel/power-libperfmgr
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -535,7 +532,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.millennium    
+    android.hardware.vibrator-service.mediatek
 
 # VNDK
 PRODUCT_PACKAGES += \
