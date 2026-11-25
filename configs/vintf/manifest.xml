@@ -1,10 +1,3 @@
-<!--
-     Copyright (C) 2026 Slate. All Rights Reserved.
-
-     PROPRIETARY AND CONFIDENTIAL.
-     This software is the sole property of Slate. Unauthorized copying,
-     distribution, or use of this file is strictly prohibited.
--->
 <manifest version="4.0" type="device" target-level="7">
     <hal format="hidl">
         <name>android.hardware.audio</name>
@@ -375,16 +368,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IVideoTelephony/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.transsion.hardware.tne.tneengine</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITne</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITne/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee</name>

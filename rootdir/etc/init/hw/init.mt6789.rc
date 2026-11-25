@@ -1,10 +1,3 @@
-#
-# Copyright (C) 2026 Slate. All Rights Reserved.
-#
-# PROPRIETARY AND CONFIDENTIAL.
-# This software is the sole property of Slate. Unauthorized copying,
-# distribution, or use of this file is strictly prohibited.
-#
 # MTK platform .rc configure
 
 import /vendor/etc/init/hw/init.connectivity.rc
@@ -361,12 +354,7 @@ on boot
     chmod 0666 /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/blue/brightness
     chmod 0666 /sys/class/leds/green/brightness
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/tran_bat_temp
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/CHG_CAPACITY_TEST
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/tran_set_current
     chmod 0666 /sys/devices/platform/charger/Charger_Type
-	chown system system /sys/devices/platform/charger/tran_aichg_bigdata
-	chmod 0666 /sys/devices/platform/charger/tran_aichg_bigdata
     #BSP:add for charger&led midtest by lei.shi5 20220505 end
     #MG-CHG(Bypass):wireless function by yongqing 20221008 start
     chmod 0666 /sys/wireless/wireless/Rx/brushFW
