@@ -256,7 +256,7 @@ vendor/lib/mt6789/libmtkcam_stdutils.so
 vendor/lib/mt6789/libmtkcam_sysutils.so
 vendor/lib/mt6789/libmtkcam_tuning_utils.so
 vendor/lib/mt6789/libmtkcam_ulog.so
-vendor/lib/mt6789/libpq_prot.so|libpq_prot
+vendor/lib/mt6789/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so|libpq_prot
 vendor/lib/libCamera_motvickyhi1634qmipiraw_Auto_Night_Vision.so
 vendor/lib/libCamera_motvickyhi1634qmipiraw_E2EHDR_Preview.so
 vendor/lib/libCamera_motvickyhi1634qmipiraw_E2EHDR_Video.so
@@ -1035,8 +1035,8 @@ vendor/etc/media_profiles_vendor.xml
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
-vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
-vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
+vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 
@@ -2006,7 +2006,7 @@ vendor/lib64/mt6789/lib3a.lce.so
 vendor/lib64/mt6789/lib3a.n3d3a.so
 vendor/lib64/mt6789/lib3a.sensors.color.so
 vendor/lib64/mt6789/lib3a.sensors.flicker.so
-vendor/lib64/mt6789/libDR.so
+vendor/lib64/mt6789/libDR.so;SYMLINK=vendor/lib64/libDR.so
 vendor/lib64/mt6789/libSonyIMX230PdafLibrary.so
 vendor/lib64/mt6789/libSonyIMX230PdafLibraryWrapper.so
 vendor/lib64/mt6789/libSonyIMX338PdafLibrary.so
