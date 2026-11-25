@@ -203,7 +203,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor:64
+    android.hardware.biometrics.fingerprint@2.1.vendor:64 \
+    com.motorola.hardware.biometric.fingerprint@1.0.vendor:64
 
 # fstab
 PRODUCT_COPY_FILES += \
