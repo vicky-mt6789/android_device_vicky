@@ -61,6 +61,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
         .replace_needed('libcodec2_hidl@1.1.so', 'libcodec2_hidl@1.1-v31.so')
         .replace_needed('libcodec2_hidl@1.2.so', 'libcodec2_hidl@1.2-v31.so'),
+    'vendor/etc/init/camerahalserver.rc': blob_fixup()
+        .add_line_if_missing('    setenv LD_LIBRARY_PATH /vendor/lib64/mt6789:/vendor/lib64'),
     'vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc': blob_fixup()
         .add_line_if_missing('    interface android.hardware.media.c2@1.0::IComponentStore default')
         .add_line_if_missing('    interface android.hardware.media.c2@1.1::IComponentStore default')
