@@ -1,0 +1,15 @@
+<!--
+  Copyright (C) 2026 Slate. All Rights Reserved.
+
+  PROPRIETARY AND CONFIDENTIAL.
+  This software is the sole property of Slate. Unauthorized copying,
+  distribution, or use of this file is strictly prohibited.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.systemui.vicky">
+
+    <overlay
+        android:isStatic="true"
+        android:priority="350"
+        android:targetPackage="com.android.systemui" />
+</manifest>

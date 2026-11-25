@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+     Copyright (C) 2026 Slate. All Rights Reserved.
+
+     PROPRIETARY AND CONFIDENTIAL.
+     This software is the sole property of Slate. Unauthorized copying,
+     distribution, or use of this file is strictly prohibited.
+
      Copyright (C) 2022 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.providers.settings.overlay.rozen">
+    package="com.android.providers.settings.overlay.vicky">
 
     <overlay
         android:isStatic="true"
