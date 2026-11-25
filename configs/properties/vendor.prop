@@ -1,3 +1,11 @@
+#
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
+
 # Audio
 ro.hardware.audio.primary=mt6789
 ro.hardware.audio.r_submix=mediatek
@@ -81,7 +89,7 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 # Display
 debug.graphics.game_default_frame_rate.disabled=true
 debug.mediatek.appgamepq_compress=1
-debug.mediatek.disp_decompress=1
+debug.mediatek.disp_decompress=0
 persist.vendor.sys.mtkaal.function=0
 ro.hardware.egl=meow
 ro.hardware.gralloc=common
@@ -109,13 +117,13 @@ ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
 ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
 ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
 ro.vendor.composer_version=2.3
-ro.vendor.mtk_aal_support=1
+ro.vendor.mtk_aal_support=0
 ro.vendor.mtk_aod_support=1
 ro.vendor.mtk_ovl_bringup=0
-ro.vendor.mtk_pq_color_mode=1
-ro.vendor.mtk_pq_support=2
+ro.vendor.mtk_pq_color_mode=0
+ro.vendor.mtk_pq_support=0
 ro.vendor.pq.disp_lcm_name_support=0
-ro.vendor.pq.mtk_aal_support=1
+ro.vendor.pq.mtk_aal_support=0
 ro.vendor.pq.mtk_ai_scence_pq_support=0
 ro.vendor.pq.mtk_ai_sdr_to_hdr_support=0
 ro.vendor.pq.mtk_backlight_smooth_support=0
@@ -124,10 +132,10 @@ ro.vendor.pq.mtk_caltm_support=0
 ro.vendor.pq.mtk_clearzoom_support=1
 ro.vendor.pq.mtk_dc_support=0
 ro.vendor.pq.mtk_disp_c3d_support=0
-ro.vendor.pq.mtk_disp_ccorr_support=1
-ro.vendor.pq.mtk_disp_color_support=1
+ro.vendor.pq.mtk_disp_ccorr_support=0
+ro.vendor.pq.mtk_disp_color_support=0
 ro.vendor.pq.mtk_disp_game_pq_support=0
-ro.vendor.pq.mtk_disp_gamma_support=1
+ro.vendor.pq.mtk_disp_gamma_support=0
 ro.vendor.pq.mtk_disp_tdshp_support=0
 ro.vendor.pq.mtk_dre30_support=0
 ro.vendor.pq.mtk_ds_support=0
@@ -202,7 +210,6 @@ ro.lmk.thrashing_limit_decay=50
 
 # Media
 media.c2.hal.selection=aidl
-debug.mediatek.disp_decompress=1
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
 ro.vendor.jpeg_decode_sw_opt=1
@@ -234,7 +241,6 @@ persist.vendor.factory.GB2312=no
 ro.netflix.bsp_rev=MTK6789-35965-1
 ro.vendor.efuse_writer_enable=1
 ro.vendor.mml.mtk_mml_support=0
-ro.vendor.mtk_aal_support=1
 ro.vendor.mtk_fast_charging_support=1
 ro.vendor.mtk_gwsd_capability=1
 ro.vendor.mtk_mvpu_security_support=0
