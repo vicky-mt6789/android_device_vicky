@@ -540,6 +540,7 @@ PRODUCT_PACKAGES += \
     libstagefright_foundation-v33:64 \
     libprocessgroup_shim:64 \
     libtinyalsa-v32:64 \
+    libtinyxml2-v34:64 \
     libutils-v32:64
 
 # USB

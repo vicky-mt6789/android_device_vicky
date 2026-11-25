@@ -114,7 +114,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/hw/audio.primary.mediatek.so', 'vendor/lib64/hw/audio.primary.mt6789.so'): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libutils.so', 'libutils-v32.so')
-        .replace_needed('libtinyalsa.so', 'libtinyalsa-v32.so'),
+        .replace_needed('libtinyalsa.so', 'libtinyalsa-v32.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/mt6789/libcam.hal3a.v3.so', 'vendor/lib64/hw/hwcomposer.mtk_common.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     ('vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 
