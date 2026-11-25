@@ -517,6 +517,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/vndk \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    hardware/motorola \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/google/pixel/pixelstats \
