@@ -1,4 +1,10 @@
 #
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -110,6 +116,22 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODU
 
 # Vendor modules (installed to vendor_dlkm)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_dlkm/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+    sensors_class.ko \
+    mmi_relay.ko \
+    touchscreen_mmi.ko \
+    goodix_brl_mmi.ko \
+    aw883xx_k510_dlkm.ko \
+    aw86715.ko \
+    aw9610x.ko \
+    ets_fod_mmi.ko \
+    pn557.ko \
+    leds-gpio.ko \
+    utags.ko \
+    mmi_info.ko \
+    bq2597x_mmi_discrete.ko \
+    mmi_discrete_charger_qc3p.ko \
+    qpnp_adaptive_charge.ko
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor_dlkm/*.ko)
 
 # Filesystem
