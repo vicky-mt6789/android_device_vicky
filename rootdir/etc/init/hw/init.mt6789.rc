@@ -352,6 +352,10 @@ on boot
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
 
+    # Charging control
+    chown system system /sys/module/qpnp_adaptive_charge/parameters/upper_limit
+    chmod 0664 /sys/module/qpnp_adaptive_charge/parameters/upper_limit
+
     #BSP:add for charger&led midtest by lei.shi5 20220505 start
     chmod 0666 /dev/MT_pmic_adc_cali
     chmod 0666 /sys/class/leds/red/brightness
