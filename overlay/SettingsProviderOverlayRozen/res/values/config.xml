@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+ * Copyright (C) 2026 Slate. All Rights Reserved.
+ *
+ * PROPRIETARY AND CONFIDENTIAL.
+ * This software is the sole property of Slate. Unauthorized copying,
+ * distribution, or use of this file is strictly prohibited.
+ *
 /**
  * Copyright (c) 2009, The Android Open Source Project
  *
@@ -18,5 +24,5 @@
 -->
 <resources>
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
-    <string name="def_device_name_simple">Millennium Rozen</string>
+    <string name="def_device_name_simple">%1$s</string>
 </resources>
