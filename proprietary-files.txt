@@ -1,3 +1,10 @@
+#
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # Unpinned blobs from vicky_g_sys-user 13 T2SVS33M.68-21-6-3 e8924 release-keys
 
 # Audio
@@ -203,13 +210,9 @@ vendor/lib64/libnvram_sec.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Boot
 -vendor/bin/hw/android.hardware.boot@1.2-service
@@ -746,13 +749,11 @@ vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789:vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/bin/hw/android.hardware.graphics.composer@2.1-service
-vendor/bin/hw/android.hardware.graphics.composer@2.3-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
 vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
 vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.2-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
@@ -763,10 +764,10 @@ vendor/lib/egl/libMEOW_data.so
 vendor/lib/egl/libMEOW_gift.so
 vendor/lib/egl/libMEOW_qt.so
 vendor/lib/egl/libMEOW_trace.so
-vendor/lib/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so
-vendor/lib/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib/hw/mt6789/gralloc.common.so
-vendor/lib/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so
+vendor/lib/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+vendor/lib/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib/hw/gralloc.common.so
+vendor/lib/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib/hw/displaypanel.default.so
 vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
@@ -805,10 +806,10 @@ vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_qt.so
 vendor/lib64/egl/libMEOW_trace.so
-vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6789/gralloc.common.so
-vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so
+vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib64/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
+vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/hw/displaypanel.default.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
@@ -822,7 +823,6 @@ vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
--vendor/lib64/libhwc2onfbadapter.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
@@ -938,13 +938,10 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_nTelos.xml
 vendor/etc/gnss/agps_profiles_conf2.xml
 
 # Health
--vendor/bin/hw/android.hardware.health@2.1-service
 -vendor/bin/hw/motorola.hardware.health.storage@1.0-service;DISABLE_CHECKELF
 -vendor/bin/hw/motorola.hardware.health@2.0-service;DISABLE_CHECKELF
--vendor/etc/init/android.hardware.health@2.1-service.rc
 -vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
 -vendor/etc/init/motorola.hardware.health@2.0-service.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 vendor/lib64/libmotohid.so;DISABLE_CHECKELF
 -vendor/lib64/motorola.hardware.health.storage@1.0.so
 -vendor/lib64/motorola.hardware.health@2.0.so
@@ -994,7 +991,7 @@ vendor/lib/libcodec2_mtk_vdec.so
 vendor/lib/libcodec2_mtk_venc.so
 vendor/lib/libcodec2_vpp_qt_plugin.so
 vendor/lib/libcodec2_vpp_rs_plugin.so
-vendor/lib/libformatter.so
+vendor/lib/libformatter.so;MODULE_SUFFIX=_vendor
 vendor/lib/libmp3dec_mtk.so
 -vendor/lib/libstagefrighthw.so
 vendor/lib64/libMtkOmxCore.so
@@ -1003,7 +1000,7 @@ vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libformatter.so
+vendor/lib64/libformatter.so;MODULE_SUFFIX=_vendor
 -vendor/lib64/libstagefrighthw.so
 
 # Media (Dolby)
@@ -1072,7 +1069,6 @@ vendor/lib64/libmtkutils.so
 vendor/lib64/libratconfig.so
 vendor/lib64/librilfusion.so
 vendor/lib64/libsysenv.so
-vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 
 # Radio (IMS)
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
@@ -1241,7 +1237,7 @@ vendor/bin/conninfra_loader
 vendor/bin/eara_io_service
 vendor/bin/epdg_wod
 vendor/bin/expat
-vendor/bin/factory;DISABLE_CHECKELF
+vendor/bin/factory;DISABLE_DEPS
 vendor/bin/fdrcontrol
 vendor/bin/fotacontrol
 vendor/bin/fpsgo
@@ -1308,7 +1304,6 @@ vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
 vendor/etc/init/camerahalserver.rc
-vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/eara-io-service.rc
 vendor/etc/init/fpsgo.rc
 # vendor/etc/init/fuelgauged_init.rc          - using custom replacement
@@ -1575,7 +1570,6 @@ vendor/etc/security/cacerts_supl/f336e3d1.0
 vendor/etc/security/cacerts_supl/facacbc6.0
 vendor/etc/tetras/portrait_repair_composite.model
 vendor/etc/vintf/manifest/fdrcontrol_1.2_manifest.xml
-vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 #vendor/etc/vintf/manifest/lights-mtk-default.xml
 vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
@@ -1621,10 +1615,8 @@ vendor/etc/fstab.emmc
 vendor/etc/fstab.enableswap
 vendor/etc/fstab.enablezram
 vendor/etc/fstab.enablezramwb
-vendor/etc/fstab.mt6789
 vendor/etc/fstb.cfg
 vendor/etc/gbe.cfg
-vendor/etc/init.insmod.mt6789.cfg
 vendor/etc/meow.cfg
 vendor/etc/mkshrc
 vendor/etc/mot_spn_table
@@ -1989,7 +1981,6 @@ vendor/lib/meta_wifi_data.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.2.so
@@ -2065,7 +2056,7 @@ vendor/lib64/mt6789/libcameracustom.camera_exif.so
 vendor/lib64/mt6789/libcameracustom.flashlight.so
 vendor/lib64/mt6789/libcameracustom.plugin.so
 vendor/lib64/mt6789/libgpudataproducer.so
-vendor/lib64/mt6789/libmnl.so
+vendor/lib64/mt6789/libmnl.so;MODULE_SUFFIX=_vendor;SYMLINK=vendor/lib64/libmnl.so
 vendor/lib64/mt6789/libmtkcam_fwkutils.so
 vendor/lib64/mt6789/libmtkcam_modulefactory_aaa.so
 vendor/lib64/mt6789/libmtkcam_modulefactory_custom.so
@@ -2278,9 +2269,7 @@ vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so

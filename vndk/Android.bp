@@ -1,0 +1,31 @@
+//
+// Copyright (C) 2026 Slate. All Rights Reserved.
+//
+// PROPRIETARY AND CONFIDENTIAL.
+// This software is the sole property of Slate. Unauthorized copying,
+// distribution, or use of this file is strictly prohibited.
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {}
+
+cc_prebuilt_library_shared {
+    name: "libtinyalsa-v32",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["arm/libtinyalsa-v32.so"],
+        },
+        android_arm64: {
+            srcs: ["arm64/libtinyalsa-v32.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    vendor: true,
+}

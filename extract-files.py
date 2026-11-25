@@ -1,5 +1,11 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -21,6 +27,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/motorola/vicky',
+    'device/motorola/vicky/vndk',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
     'vendor/mediatek/ims',
@@ -38,6 +45,10 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'libformatter',
+        'libmnl',
+    ): lib_fixup_vendor_suffix,
 }
 
 patchelf_version = "0_17_2"
@@ -99,10 +110,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .add_needed('android.hardware.sensors@1.0-convert-shared.so')
         .replace_needed('libutils.so', 'libutils-v32.so'),
-    'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
+    ('vendor/lib64/hw/audio.primary.mediatek.so', 'vendor/lib64/hw/audio.primary.mt6789.so'): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
-        .replace_needed('libutils.so','libutils-v32.so')
-        .replace_needed('libalsautils.so','libalsautils-v31.so'),
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libtinyalsa.so', 'libtinyalsa-v32.so'),
     ('vendor/lib64/mt6789/libcam.hal3a.v3.so', 'vendor/lib64/hw/hwcomposer.mtk_common.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     ('vendor/lib/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 
@@ -175,8 +186,6 @@ blob_fixups: blob_fixups_user_type = {
     # 'vendor/bin/hw/motorola.hardware.sarwifi-srv': blob_fixup()
     #     .replace_needed('motorola.hardware.sarwifi-V1-ndk.so', 'motorola.hardware.sarwifi-V1-ndk_platform.so'),
     # Fix missing dependency modules
-    'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
-        .replace_needed('libalsautils-v31.so', 'libalsautilsv2.so'),
     'vendor/bin/hw/android.hardware.gnss-service.mediatek': blob_fixup()
         .replace_needed('android.hardware.gnss-impl-mediatek.so', 'android.hardware.gnss-impl-mediatek.so'),
     # Fix libacdk dependency to use libminui instead of libminiui

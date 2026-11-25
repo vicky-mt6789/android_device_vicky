@@ -1,4 +1,10 @@
 #
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -68,7 +74,7 @@ PRODUCT_PACKAGES += \
     create_pl_dev.recovery
 
 # Audio
-$(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:64 \
@@ -166,11 +172,13 @@ PRODUCT_PACKAGES += android.hardware.memtrack-service.mediatek
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor:64 \
+    android.hardware.graphics.composer@2.3-service \
     android.frameworks.sensorservice@1.0.vendor:64 \
     android.hardware.graphics.mapper@4.0.vendor:64 \
     libhwc2on1adapter:64 \
     libhwc2onfbadapter:64 \
-    libdrm.vendor:64
+    libdrm.vendor:64 \
+    libxml2.vendor:64
 
 PRODUCT_PACKAGES += \
     ANGLE
@@ -217,15 +225,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl.vendor:64
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vintf/gnss-aidl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/gnss-aidl.xml
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery \
     charger_res_images_vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -255,6 +262,7 @@ PRODUCT_PACKAGES += \
     fuelgauged_init_nvram.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
+    init.boot_logger.sh \
     init.insmod.sh \
     init.insmod.mt6789.cfg \
     init.modem.rc \
@@ -501,20 +509,25 @@ PRODUCT_COPY_FILES += \
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    $(LOCAL_PATH)/vndk \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/google/interfaces \
     hardware/google/pixel \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/power-libperfmgr \
     hardware/millenium \
     hardware/millenium/libtranlog
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.mediatek
+    android.hardware.thermal-service.mediatek \
+    pixelatoms-cpp
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
@@ -531,11 +544,12 @@ PRODUCT_PACKAGES += \
     libhidlbase_shim:64 \
     libstagefright_foundation-v33:64 \
     libprocessgroup_shim:64 \
+    libtinyalsa-v32:64 \
     libutils-v32:64
 
 # USB
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
-$(call soong_config_set,mediatek_gadget,use_custom_usb_gadget_rc,true)
+$(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set_bool,mediatek_gadget,use_custom_usb_gadget_rc,true)
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek

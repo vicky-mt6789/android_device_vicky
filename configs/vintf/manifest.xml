@@ -1,27 +1,30 @@
-<manifest version="4.0" type="device" target-level="6">
+<!--
+     Copyright (C) 2026 Slate. All Rights Reserved.
+
+     PROPRIETARY AND CONFIDENTIAL.
+     This software is the sole property of Slate. Unauthorized copying,
+     distribution, or use of this file is strictly prohibited.
+-->
+<manifest version="4.0" type="device" target-level="7">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
         <version>7.0</version>
-        <version>7.1</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
         <fqname>@7.0::IDevicesFactory/default</fqname>
-        <fqname>@7.1::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
         <version>7.0</version>
-        <version>7.1</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
         <fqname>@7.0::IEffectsFactory/default</fqname>
-        <fqname>@7.1::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
