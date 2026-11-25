@@ -1,3 +1,10 @@
+#
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt6789/fstab.in.mt6789"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
@@ -38,10 +45,6 @@ vendor_dlkm /vendor_dlkm ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 /dev/block/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 /dev/block/by-name/prodpersist /mnt/product/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
-
-
-
-/dev/block/by-name/tzapp /mnt/vendor/tzapp ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 
 
 

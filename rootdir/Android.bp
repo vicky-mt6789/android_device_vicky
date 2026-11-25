@@ -1,3 +1,11 @@
+/*
+ * Copyright (C) 2026 Slate. All Rights Reserved.
+ *
+ * PROPRIETARY AND CONFIDENTIAL.
+ * This software is the sole property of Slate. Unauthorized copying,
+ * distribution, or use of this file is strictly prohibited.
+ */
+
 //
 // Copyright (C) 2023 The LineageOS Project
 //
@@ -14,14 +22,14 @@ prebuilt_etc {
 prebuilt_etc {
     name: "fuelgauged_init.rc",
     src: "etc/init/hw/fuelgauged_init.rc",
-    relative_install_path: "vendor/etc/init",
+    relative_install_path: "init",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "fuelgauged_init_nvram.rc",
     src: "etc/init/hw/fuelgauged_init_nvram.rc",
-    relative_install_path: "vendor/etc/init",
+    relative_install_path: "init",
     vendor: true,
 }
 
@@ -119,5 +127,11 @@ prebuilt_etc {
 sh_binary {
     name: "init.insmod.sh",
     src: "bin/init.insmod.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.boot_logger.sh",
+    src: "bin/init.boot_logger.sh",
     vendor: true,
 }

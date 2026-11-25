@@ -1,16 +1,12 @@
+#
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
+
 service fuelgauged /vendor/bin/fuelgauged
     class core
     user system
     group system
-
-on early-fs
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"
-    write /dev/kmsg "DEBUG: early-fs triggered, starting fuelgauge!"

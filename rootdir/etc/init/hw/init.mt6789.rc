@@ -1,3 +1,10 @@
+#
+# Copyright (C) 2026 Slate. All Rights Reserved.
+#
+# PROPRIETARY AND CONFIDENTIAL.
+# This software is the sole property of Slate. Unauthorized copying,
+# distribution, or use of this file is strictly prohibited.
+#
 # MTK platform .rc configure
 
 import /vendor/etc/init/hw/init.connectivity.rc
@@ -47,8 +54,8 @@ on property:init.svc.vendor.charger=running
     chmod 0660 /sys/power/wakeup_count
     write /sys/power/pm_freeze_timeout 2000
 
-#    start fuelgauged
-#    start fuelgauged_nvram
+    start fuelgauged
+    start fuelgauged_nvram
 
     chown system system /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/red/brightness
@@ -61,6 +68,7 @@ on property:sys.boot_completed=1
 on fs
     # mount fstab
     mount_all --early
+    symlink /vendor/app/mcRegistry /mnt/vendor/tzapp
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
 on late-init
@@ -447,40 +455,28 @@ on property:sys.boot_completed=1
     write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
 
 
-# Logger
-service boot_log /system/bin/logcat -b all -f /cache/boot_logcat.txt
-    class core
-    user root
-    group root system
-    seclabel u:r:su:s0
-
-service boot_log_kernel /system/bin/logcat -b kernel -f /cache/boot_kernel.txt
-    class core
-    user root
-    group root system
-    seclabel u:r:su:s0
-
-service pmsg_copy /system/bin/sh -c "while true; do cp /sys/fs/pstore/pmsg-ramoops-0 /cache/pmsg_copy.txt 2>/dev/null; sync; sleep 1; done"
+# Persistent boot logger (writes to /metadata/boot_logs, mounted in first_stage_mount)
+service boot_logger /vendor/bin/init.boot_logger.sh
     class core
     user root
     group root system
     disabled
     seclabel u:r:su:s0
 
+service boot_logcat /system/bin/logcat -b all -v threadtime -f /metadata/boot_logs/logcat.txt -r 1024 -n 2
+    class core
+    user root
+    group root system log
+    disabled
+    seclabel u:r:su:s0
+
+on early-init
+    mkdir /metadata/boot_logs 0775 root system
+    start boot_logger
+
 on post-fs
-    # Create log files and set permissions
-    write /cache/boot_logcat.txt ""
-    chmod 0666 /cache/boot_logcat.txt
-    write /cache/boot_kernel.txt ""
-    chmod 0666 /cache/boot_kernel.txt
-    write /cache/pmsg_copy.txt ""
-    chmod 0666 /cache/pmsg_copy.txt
-    start boot_log
-    start boot_log_kernel
-    start pmsg_copy
+    start boot_logcat
 
 on property:sys.boot_completed=1
-# Stop the logger services
-    stop boot_log
-    stop boot_log_kernel
-    stop pmsg_copy
+    stop boot_logcat
+    stop boot_logger
