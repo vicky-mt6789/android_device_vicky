@@ -739,8 +739,6 @@ vendor/lib64/libdpframework.so|libdpframework
 vendor/lib64/com.motorola.hardware.display.touch@1.0.so
 vendor/lib64/com.motorola.hardware.display.touch@1.1.so
 vendor/lib64/com.motorola.hardware.display.touch@1.2.so
-vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service;DISABLE_CHECKELF
-vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
 vendor/lib/com.motorola.hardware.display.panel@1.0.so
 vendor/lib/com.motorola.hardware.display.panel@1.1.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
@@ -939,9 +937,7 @@ vendor/etc/gnss/agps_profiles_conf2.xml
 
 # Health
 -vendor/bin/hw/motorola.hardware.health.storage@1.0-service;DISABLE_CHECKELF
--vendor/bin/hw/motorola.hardware.health@2.0-service;DISABLE_CHECKELF
 -vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
--vendor/etc/init/motorola.hardware.health@2.0-service.rc
 vendor/lib64/libmotohid.so;DISABLE_CHECKELF
 -vendor/lib64/motorola.hardware.health.storage@1.0.so
 -vendor/lib64/motorola.hardware.health@2.0.so
@@ -1092,8 +1088,6 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustoni
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 
 # Sensors
-vendor/bin/hw/motorola.hardware.sensorscalibrate@1.0-service
-vendor/etc/init/motorola.hardware.sensorscalibrate@1.0-service.rc
 vendor/lib/sensors.moto.so;DISABLE_CHECKELF
 vendor/lib64/hw/sensors.mediatek.V2.0.so
 vendor/lib64/hw/sensors.mt6789.so;DISABLE_CHECKELF
