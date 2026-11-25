@@ -18,7 +18,6 @@ persist.vendor.goodix.dump_data             u:object_r:vendor_fingerprint_prop:s
 persist.vendor.sys.fp.goodix.spmt.flag      u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.goodix.X.offset                   u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.goodix.Y.offset                   u:object_r:vendor_fingerprint_prop:s0
-vendor.fp.transsion.lcmname                 u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.currentUid                        u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.fp.sensorUid                 u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.sys.fp.fod.location.X_Y         u:object_r:vendor_fingerprint_prop:s0

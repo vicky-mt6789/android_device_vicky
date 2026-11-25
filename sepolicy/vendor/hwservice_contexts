@@ -1,5 +1,4 @@
 # Camera
-vendor.transsion.hardware.trancam.trancamserver::ITrancamserver                     u:object_r:hal_trancamserver_hwservice:s0
 
 # Fingerprint
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon             u:object_r:hal_fingerprint_hwservice:s0
@@ -15,7 +14,5 @@ vendor.nxp.nxpnfc::INxpNfc                                                      
 vendor.nxp.nxpnfclegacy::INxpNfcLegacy                                                   u:object_r:nxpnfc_hwservice:s0
 
 # TNE
-vendor.transsion.hardware.tne.tneengine::ITne                                  u:object_r:hal_tnev_hwservice:s0
 
 # Wi-Fi
-vendor.transsion.hardware.wifi.hostapd::IHostapd                                    u:object_r:hal_wifi_hostapd_hwservice:s0

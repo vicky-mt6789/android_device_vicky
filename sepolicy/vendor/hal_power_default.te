@@ -1,4 +1,4 @@
-# Allow libperfmgr to access Transsion DT2W Nodes
+# Allow libperfmgr to access DT2W Nodes
 allow hal_power_default proc_gesture_function:dir search;
 allow hal_power_default proc_gesture_function:file rw_file_perms;
 
