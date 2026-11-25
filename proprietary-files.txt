@@ -220,6 +220,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 # Camera
 -vendor/lib/motorola.hardware.camera.imgtuner@1.0.so
 -vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
+vendor/lib/motorola.hardware.camera.imgtuner@2.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/motorola.hardware.camera.imgtuner@2.0.so;MODULE_SUFFIX=_vendor
 system_ext/lib/libarcsoft_calibverify_TriCamera.so
 system_ext/lib/libarcsoft_tricam_calibration.so
