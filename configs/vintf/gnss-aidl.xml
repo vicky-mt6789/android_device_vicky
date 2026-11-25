@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  Copyright (C) 2026 Slate. All Rights Reserved.
-
-  PROPRIETARY AND CONFIDENTIAL.
-  This software is the sole property of Slate. Unauthorized copying,
-  distribution, or use of this file is strictly prohibited.
--->
 <manifest version="1.0" type="device">
     <hal format="aidl">
         <name>android.hardware.gnss</name>

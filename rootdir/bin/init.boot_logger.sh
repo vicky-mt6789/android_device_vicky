@@ -1,12 +1,4 @@
 #!/vendor/bin/sh
-#
-# Copyright (C) 2026 Slate. All Rights Reserved.
-#
-# PROPRIETARY AND CONFIDENTIAL.
-# This software is the sole property of Slate. Unauthorized copying,
-# distribution, or use of this file is strictly prohibited.
-#
-
 LOG_DIR="/metadata/boot_logs"
 MAX_DMESG_BYTES=1572864
 

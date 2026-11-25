@@ -1,11 +1,4 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
-#
-# Copyright (C) 2026 Slate. All Rights Reserved.
-#
-# PROPRIETARY AND CONFIDENTIAL.
-# This software is the sole property of Slate. Unauthorized copying,
-# distribution, or use of this file is strictly prohibited.
-#
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
