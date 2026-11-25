@@ -246,7 +246,7 @@ vendor/lib/mt6789/libcam.hal3a.log.so
 vendor/lib/mt6789/libcam.halsensor.hwintegration.so
 vendor/lib/mt6789/libcamalgo.platform2.so
 vendor/lib/mt6789/libcameracustom.lens.so
-vendor/lib/mt6789/libmtk_drvb.so
+vendor/lib/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/mt6789/libmtkcam.atmseventmgr.so
 vendor/lib/mt6789/libmtkcam.eventcallback.so
 vendor/lib/mt6789/libmtkcam_debugutils.so
@@ -466,7 +466,7 @@ vendor/lib64/mt6789/libfeature_rss.so
 vendor/lib64/mt6789/libfeatureiodrv_mem.so
 vendor/lib64/mt6789/liblpcnr.so
 vendor/lib64/mt6789/libmsnr.so
-vendor/lib64/mt6789/libmtk_drvb.so
+vendor/lib64/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/mt6789/libmtkcam.atmseventmgr.so
 vendor/lib64/mt6789/libmtkcam.debugwrapper.so
 vendor/lib64/mt6789/libmtkcam.eventcallback.so
