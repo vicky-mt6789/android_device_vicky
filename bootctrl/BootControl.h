@@ -59,7 +59,6 @@ class BootControl : public IBootControl {
   private:
     android::bootable::BootControl impl_;
     android::bootable::BootControlExt implext_;
-    Return<void> clearAvbbctlFlag();
 };
 
 extern "C" IBootControl* HIDL_FETCH_IBootControl(const char* name);
