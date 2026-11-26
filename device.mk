@@ -192,6 +192,8 @@ PRODUCT_PACKAGES += \
     fastbootd:64
 
 # Fingerprint
+$(call soong_config_set_bool,surfaceflinger,has_mtk_udfps,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor:64 \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor:64

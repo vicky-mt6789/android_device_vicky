@@ -319,22 +319,17 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
    
-    <!-- Whether device uses power button fingerprint sensor or not -->
-    <bool name="config_is_powerbutton_fps">true</bool>
-
-     <!-- An array of arrays of side fingerprint sensor properties relative to each display.
-     Note: this value is temporary and is expected to be queried directly
-     from the HAL in the future. -->
-     <array name="config_sfps_sensor_props" translatable="false">
-          <item>@array/config_sfps_sensor_props_0</item>
-     </array>
-
-     <array name="config_sfps_sensor_props_0" translatable="false">
-          <item>local:0</item>     <!-- displayId -->
-          <item>1080</item> <!-- sensorLocationX -->
-          <item>1056</item>  <!-- sensorLocationY -->
-          <item>210</item>  <!-- sensorRadius -->
-     </array>
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false">
+        <!--
+            <item>sensorLocationX</item>
+            <item>sensorLocationY</item>
+            <item>sensorRadius</item>
+        -->
+        <item>540</item>
+        <item>2138</item>
+        <item>85</item>
+    </integer-array>
 
      <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
