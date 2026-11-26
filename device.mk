@@ -529,6 +529,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # Vibrator
+$(call soong_config_set_bool,mediatek_vibrator,supports_effects,true)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
@@ -573,6 +574,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
+# Always use scudo for memory allocator
+PRODUCT_USE_SCUDO := true
+
+# ADB Root
+PRODUCT_PACKAGES += \
+    adb_root
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/vicky/vicky-vendor.mk)
