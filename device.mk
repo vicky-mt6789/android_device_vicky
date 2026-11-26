@@ -343,6 +343,7 @@ $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworkResOverlayVicky \
+    Launcher3DeviceOverlayVicky \
     SettingsResOverlayVicky \
     SettingsProviderOverlayVicky \
     SystemUIResOverlayVicky
@@ -352,7 +353,8 @@ PRODUCT_PACKAGES += \
 
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
-    ApertureOverlay
+    ApertureOverlay \
+    LineageSDKOverlayVicky
 
 # Permissions
 PRODUCT_COPY_FILES += \
