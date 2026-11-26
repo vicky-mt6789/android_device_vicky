@@ -61,7 +61,10 @@ on property:sys.boot_completed=1
 on fs
     # mount fstab
     mount_all --early
-    symlink /vendor/app/mcRegistry /mnt/vendor/tzapp
+    mkdir /mnt/vendor/persist/tzapp 0770 system system
+    mkdir /mnt/vendor/persist/tzapp/TbStorage 0770 system system
+    exec - root root -- /vendor/bin/sh -c "for f in /vendor/app/mcRegistry/*; do ln -sf \"\$f\" /mnt/vendor/persist/tzapp/; done"
+    symlink /mnt/vendor/persist/tzapp /mnt/vendor/tzapp
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
 on late-init
