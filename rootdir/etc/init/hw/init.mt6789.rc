@@ -147,12 +147,6 @@ on post-fs-data
     # Trustonic prolly also needs a persist directory
     mkdir /mnt/vendor/persist/mcRegistry 0775 system system
 
-#ITD:modify for cam SN bind by huihang.zhou 20230302 start
-#CAM OTP SN
-    chown root root /sys/class/sensordrv/tran_imgsensor/tran_imgsensor_sn
-    chmod 0666 /sys/class/sensordrv/tran_imgsensor/tran_imgsensor_sn
-#ITD:modify for cam SN bind by huihang.zhou 20230302 end
-
     # Set SELinux security contexts on upgrade or policy update.
     restorecon_recursive /mnt/vendor/nvdata
 
@@ -368,19 +362,11 @@ on boot
 
 
     #MG-CHG(Bypass):bypass function by yongqing 20221008 start
-    chown system system /sys/devices/platform/charger/tran_aichg_disable_charger
-    chmod 0666 /sys/devices/platform/charger/tran_aichg_disable_charger
     chown system system /sys/devices/platform/charger/bypass_charger
     chmod 0666 /sys/devices/platform/charger/bypass_charger
 	chown system system /sys/devices/platform/odm/odm:smart_charging/smart_charging
 	chmod 0664 /sys/devices/platform/odm/odm:smart_charging/smart_charging
     #MG-CHG(Bypass):bypass function by yongqing 20221008 end
-
-	chown system system /sys/led/led/tran_led_cmd
-	chmod 0666 /sys/led/led/tran_led_cmd
-
-	chown system system /sys/led/led/tran_led_check
-	chmod 0666 /sys/led/led/tran_led_check
 
     chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
@@ -444,11 +430,6 @@ on property:vendor.mtk.md1.status=reset
 
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
-
-# OTG
-on property:sys.boot_completed=1
-    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
-
 
 # Persistent boot logger (writes to /metadata/boot_logs, mounted in first_stage_mount)
 service boot_logger /vendor/bin/init.boot_logger.sh

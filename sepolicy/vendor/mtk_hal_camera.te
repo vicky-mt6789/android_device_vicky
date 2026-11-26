@@ -7,7 +7,6 @@ allow mtk_hal_camera sysfs_sub_torch_file:file rw_file_perms;
 allow mtk_hal_camera sysfs_tele_torch_file:file rw_file_perms;
 allow mtk_hal_camera sysfs_torch_file:file rw_file_perms;
 allow mtk_hal_camera sysfs_wide_torch_file:file rw_file_perms;
-allow mtk_hal_camera sysfs_tran_cam_file:file rw_file_perms;
 allow mtk_hal_camera vicky_camera_data_file:dir { write search add_name };
 allow mtk_hal_camera vicky_camera_data_file:file {read write create open };
 allow mtk_hal_camera vendor_arcsoft_data_file:dir { read write open add_name search };
