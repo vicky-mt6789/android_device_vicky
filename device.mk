@@ -272,9 +272,6 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6789.rc
 
-# JamesDSP
-$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -433,8 +430,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.board.platform=mt6789 \
-    ro.hardware.egl=meow \
     ro.secure=0 \
     ro.adb.secure=0 \
     ro.debuggable=1 \
@@ -464,14 +459,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libexpat.vendor \
     libunwindstack.vendor \
-    libchrome.vendor:64 \
-    libcurl.vendor \
-    libexif.vendor \
-    libdng_sdk.vendor \
     liblz4.vendor \
-    libpiex \
-    libexpat.vendor \
-    libpng.vendor \
     libion.vendor \
     libui.vendor \
     libmemunreachable.vendor \
