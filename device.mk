@@ -209,6 +209,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss-service.mediatek \
     android.hardware.gnss.measurement_corrections@1.1.vendor:64 \
     android.hardware.gnss.visibility_control@1.0.vendor:64 \
     android.hardware.gnss@1.1.vendor:64 \

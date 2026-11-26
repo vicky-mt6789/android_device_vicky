@@ -885,7 +885,6 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/hw/vulkan.mali.so
 
 # GNSS
-vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib/hw/gps.default.so

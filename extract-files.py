@@ -125,7 +125,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     'vendor/lib64/mt6789/libmnl.so': blob_fixup()
         .add_needed('libcutils.so'),
-    ('vendor/bin/hw/android.hardware.gnss-service.mediatek', 'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
+    'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so': blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
@@ -180,9 +180,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
     # 'vendor/bin/hw/motorola.hardware.sarwifi-srv': blob_fixup()
     #     .replace_needed('motorola.hardware.sarwifi-V1-ndk.so', 'motorola.hardware.sarwifi-V1-ndk_platform.so'),
-    # Fix missing dependency modules
-    'vendor/bin/hw/android.hardware.gnss-service.mediatek': blob_fixup()
-        .replace_needed('android.hardware.gnss-impl-mediatek.so', 'android.hardware.gnss-impl-mediatek.so'),
     # Fix libacdk dependency to use libminui instead of libminiui
     'vendor/lib64/mt6789/libacdk.so': blob_fixup()
         .replace_needed('libminiui.so', 'libminui.so'),
