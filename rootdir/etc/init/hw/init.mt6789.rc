@@ -13,6 +13,7 @@ import /vendor/etc/init/hw/init.modem.rc
 on init
     # if primary storage is physical, set ro.vold.primary_physical to 1
     # setprop ro.vold.primary_physical 1
+    mkdir /mnt/vendor/tzapp 0770 system system
 
 # increase sysctl_rmem_max and sysctl_wmem_max values to 2M
     write /proc/sys/net/core/wmem_max 8388608
@@ -61,10 +62,11 @@ on property:sys.boot_completed=1
 on fs
     # mount fstab
     mount_all --early
-    mkdir /mnt/vendor/persist/tzapp 0770 system system
-    mkdir /mnt/vendor/persist/tzapp/TbStorage 0770 system system
-    exec - root root -- /vendor/bin/sh -c "for f in /vendor/app/mcRegistry/*; do ln -sf \"\$f\" /mnt/vendor/persist/tzapp/; done"
-    symlink /mnt/vendor/persist/tzapp /mnt/vendor/tzapp
+    chown system system /mnt/vendor/tzapp
+    chmod 0770 /mnt/vendor/tzapp
+    mkdir /mnt/vendor/tzapp/TbStorage 0770 system system
+    restorecon_recursive /mnt/vendor/tzapp
+    restorecon_recursive /mnt/vendor/persist/mcRegistry
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
 on late-init

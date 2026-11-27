@@ -53,6 +53,7 @@
 # /(vendor|system/vendor)/app/mcRegistry(/.*)?      u:object_r:mobicore_vendor_file:s0
 # /data/vendor/mcRegistry(/.*)?                     u:object_r:mobicore_data_file:s0
 /mnt/vendor/persist/mcRegistry(/.*)?              u:object_r:mobicore_data_file:s0
+/mnt/vendor/tzapp(/.*)?                           u:object_r:mobicore_data_file:s0
 
 # Trustonic
 /(vendor|system/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
