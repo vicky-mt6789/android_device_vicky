@@ -69,6 +69,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 PRODUCT_PACKAGES += \
+    android.hardware.audio.service.mediatek \
     android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.bluetooth.audio-impl:64 \
@@ -551,6 +552,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    libwifi-hal-wrapper:64 \
     wpa_supplicant \
     hostapd \
     android.hardware.wifi-service \

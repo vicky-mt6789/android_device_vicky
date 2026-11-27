@@ -1,8 +1,6 @@
 # Unpinned blobs from vicky_g_sys-user 13 T2SVS33M.68-21-6-3 e8924 release-keys
 
 # Audio
-vendor/bin/hw/android.hardware.audio.service.mediatek
-vendor/etc/init/android.hardware.audio.service.mediatek.rc
 -vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so
 -vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so
 -vendor/lib/hw/audio.primary.default.so
@@ -1128,6 +1126,7 @@ vendor/firmware/aw869x_rtp.bin
 vendor/firmware/haptic_nv_rtp.bin
 
 # Wi-Fi
+vendor/lib64/libwifi-hal-mtk.so
 #vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 #vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 #vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
